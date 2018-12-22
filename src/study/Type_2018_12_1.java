@@ -31,11 +31,13 @@ import java.util.Arrays;
 public class Type_2018_12_1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		String participant[] = new String[]{"leo", "kiki", "eden"};
+		String completion[] = new String[]{"eden", "kiki"};
+		String result = solution(participant, completion);
+		System.out.println(result);
 	}
 	
-	public String solution(String[] participant, String[] completion) {
+	public static String solution(String[] participant, String[] completion) {
 		String answer = "";
 		
 		ArrayList<String> list = new ArrayList<>();
