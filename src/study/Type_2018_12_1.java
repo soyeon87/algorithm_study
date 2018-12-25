@@ -25,8 +25,8 @@
 
 package study;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Set;
 
 public class Type_2018_12_1 {
 
@@ -39,18 +39,26 @@ public class Type_2018_12_1 {
 	
 	public static String solution(String[] participant, String[] completion) {
 		String answer = "";
-		
-		ArrayList<String> list = new ArrayList<>();
-		list.addAll(Arrays.asList(completion));
-		
-		int index = 0;
-		for(int i = 0; i < participant.length; i++){
-			index = list.indexOf(participant[i]);
-			if(index >= 0){
-				list.remove(index);
+	
+		HashMap<String, Integer> list = new HashMap<>();
+		for(int i=0; i < participant.length ; i++){
+			if(list.get(participant[i]) != null){
+				list.put(participant[i], (int)list.get(participant[i])+1);
 			}else{
-				answer = participant[i];
-				break;
+				list.put(participant[i], 1);
+			}
+		}
+		
+		for(int i=0; i < completion.length; i++){
+			if(list.get(completion[i]) > 0 ){
+				list.put(completion[i], (int)list.get(completion[i])-1);
+			}
+		}
+		
+		Set keys = list.keySet();
+		for(Object key : keys){
+			if(list.get(key.toString()) > 0){
+				answer = key.toString();
 			}
 		}
 		

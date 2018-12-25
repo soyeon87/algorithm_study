@@ -34,6 +34,9 @@ public class Type_2018_12_4 {
 	          answer = s.substring(mid-1, mid+1);
 	      }
 	      
-	      return answer;
+	      //좋은 코드
+	      return s.substring((s.length()-1) / 2, s.length()/2 + 1);
+	      
+	      //return answer;
 	}
 }

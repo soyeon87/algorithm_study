@@ -31,15 +31,15 @@ public class Type_2018_12_3 {
 	public static void main(String[] args) {
 		int n = 5;
 		int[] lost = new int[]{2,4};
-		int[] reserve = new int[]{1,3,5};
+		int[] reserve = new int[]{3};
 		int result = solution(n, lost, reserve);
 		System.out.println(result);
 	}
 	
 	public static int solution(int n, int[] lost, int[] reserve) {
         int answer = 0;
-        
-        int[] person = new int[n];
+
+		int[] person = new int[n];
         for(int i = 0; i < n; i++){
         	person[i] = 1;
         }
@@ -49,7 +49,15 @@ public class Type_2018_12_3 {
         }
         
         for(int i = 0; i< lost.length; i++){
-        	person[lost[i]-1] = 0;
+        	//잃어버리면 여분이 없어질 뿐 자신의 체육복은 존재한다.
+        	switch(person[lost[i]-1]){
+        	case 2 :
+        		person[lost[i]-1] = 1;
+        		break;
+        	case 1 :
+        		person[lost[i]-1] = 0;
+        		break;
+        	}
         }
                
         for(int i = 0; i < n ; i++){

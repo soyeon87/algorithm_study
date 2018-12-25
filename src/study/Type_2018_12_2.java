@@ -39,7 +39,7 @@ import java.util.Collections;
 public class Type_2018_12_2 {
 
 	public static void main(String[] args) {
-		int[] answers = new int[]{1,2,3,4,5};
+		int[] answers = new int[]{1,3,2,4,2};
 		int[] result = solution(answers);
 		
 		for(int i = 0; i < result.length;i++){
@@ -55,61 +55,36 @@ public class Type_2018_12_2 {
 		int[] student3 = { 3, 3, 1, 1, 2, 2, 4, 4, 5, 5 };
 
 		int score1 = 0, score2 = 0, score3 = 0;
-		int check1 = 0, check2 = 0, check3 = 0;
 		int highScore = 0;
 		ArrayList<Integer> list = new ArrayList<Integer>();
 
 		for (int i = 0; i < answers.length; i++) {
-			if (answers[i] == student1[check1]) {
+			if (answers[i] == student1[i % 5]) {
 				score1++;
 			}
-			if (answers[i] == student2[check2]) {
+			if (answers[i] == student2[i % 8]) {
 				score2++;
 			}
-			if (answers[i] == student3[check3]) {
+			if (answers[i] == student3[i % 10]) {
 				score3++;
-			}
-
-			if (highScore < score1) {
-				highScore = score1;
-			}
-			if (highScore < score2) {
-				highScore = score2;
-			}
-			if (highScore < score3) {
-				highScore = score3;
-			}
-
-			if (check1 == student1.length - 1) {
-				check1 = 0;
-			} else {
-				check1++;
-			}
-			if (check2 == student2.length - 1) {
-				check2 = 0;
-			} else {
-				check2++;
-			}
-			if (check3 == student3.length - 1) {
-				check3 = 0;
-			} else {
-				check3++;
-			}
-
-			if (i == answers.length - 1) {
-				if (highScore == score1) {
-					list.add(1);
-				}
-				if (highScore == score2) {
-					list.add(2);
-				}
-				if (highScore == score3) {
-					list.add(3);
-				}
-				Collections.sort(list);
 			}
 		}
 
+		highScore = highScore < score1 ? score1 : highScore;
+		highScore = highScore < score2 ? score2 : highScore;
+		highScore = highScore < score3 ? score3 : highScore;
+				
+		if (highScore == score1) {
+			list.add(1);
+		}
+		if (highScore == score2) {
+			list.add(2);
+		}
+		if (highScore == score3) {
+			list.add(3);
+		}
+		Collections.sort(list);
+		
 		answer = new int[list.size()];
 		for (int i = 0; i < answer.length; i++) {
 			answer[i] = list.get(i);
