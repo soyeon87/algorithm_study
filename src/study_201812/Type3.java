@@ -24,9 +24,9 @@
 //3번 학생이 2번 학생이나 4번 학생에게 체육복을 빌려주면 학생 4명이 체육수업을 들을 수 있습니다.
 
 
-package study;
+package study_201812;
 
-public class Type_2018_12_3 {
+public class Type3 {
 
 	public static void main(String[] args) {
 		int n = 5;

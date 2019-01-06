@@ -31,12 +31,12 @@
 //수포자 2는 다섯 번째 문제를 맞혔습니다.
 
 
-package study;
+package study_201812;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Type_2018_12_2 {
+public class Type2 {
 
 	public static void main(String[] args) {
 		int[] answers = new int[]{1,3,2,4,2};

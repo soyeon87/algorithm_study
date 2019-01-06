@@ -24,11 +24,11 @@ arr	answer
 문제의 예시와 같습니다.
 */
 
-package study;
+package study_201812;
 
 import java.util.ArrayList;
 
-public class Type_2018_12_8 {
+public class Type8 {
 
 	public static void main(String[] args) {
 		int arr[] = new int[]{4,4,4,3,3};

@@ -14,9 +14,9 @@ a	b	result
 5	24	TUE
 */
 
-package study;
+package study_201812;
 
-public class Type_2018_12_7 {
+public class Type7 {
 
 	public static void main(String[] args) {
 		System.out.println(solution(5, 24));

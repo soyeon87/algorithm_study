@@ -10,9 +10,9 @@
 //qwer	we
 
 
-package study;
+package study_201812;
 
-public class Type_2018_12_4 {
+public class Type4 {
 
 	public static void main(String[] args) {
 		String s = "abcde";

@@ -23,11 +23,11 @@ array	commands	return
 [1, 5, 2, 6, 3, 7, 4]를 1번째부터 7번째까지 자릅니다. [1, 2, 3, 4, 5, 6, 7]의 세 번째 숫자는 3입니다.
 */
 
-package study;
+package study_201812;
 
 import java.util.Arrays;
 
-public class Type_2018_12_6 {
+public class Type6 {
 
 	public static void main(String[] args) {
 		int[] array = new int[]{1, 5, 2, 6, 3, 7, 4};
