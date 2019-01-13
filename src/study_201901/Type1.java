@@ -26,7 +26,6 @@ arr의 모든 원소는 1으로 나누어 떨어집니다. 원소를 오름차순으로 정렬해 [1, 2, 3, 
 
 package study_201901;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Type1 {
@@ -41,6 +40,7 @@ public class Type1 {
 	}
 
 	public static int[] solution(int[] arr, int divisor) {
+		/* 1차코드
 		int[] answer = {};
 
 		ArrayList<Integer> list = new ArrayList<>();
@@ -60,6 +60,27 @@ public class Type1 {
 			answer = new int[]{-1};
 		}
         
+		return answer;
+		*/
+		
+		//2차 코드
+		int[] answer = new int[arr.length];
+		
+		int cnt = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] % divisor == 0) {
+				answer[cnt] = arr[i];
+				cnt++;
+			}
+		}
+		
+		if(cnt > 0){
+			answer = Arrays.copyOfRange(answer, 0, cnt);
+			Arrays.sort(answer);
+		}else{
+			answer = new int[]{-1};
+		}
+		
 		return answer;
 		
 		/*
