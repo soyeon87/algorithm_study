@@ -8,6 +8,13 @@ str은 길이 1 이상인 문자열입니다.
 입출력 예
 s	return
 Zbcdefg	gfedcbZ
+
+(추가)
+** 함수 활용
+1) String 글자 하나하나를 배열로 변환
+ - String[] arr = str.split("");
+2) String 합치기
+ - String.join("","");
 */
 
 package study_201901;
