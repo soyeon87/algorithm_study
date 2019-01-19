@@ -22,6 +22,9 @@ arr	answer
 입출력 예 설명
 입출력 예 #1,2
 문제의 예시와 같습니다.
+
+(참고)
+ - LinkedList를 이용한 구현 가능
 */
 
 package study_201812;

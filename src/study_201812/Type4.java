@@ -35,8 +35,8 @@ public class Type4 {
 	      }
 	      
 	      //좋은 코드
-	      return s.substring((s.length()-1) / 2, s.length()/2 + 1);
+	      //return s.substring((s.length()-1) / 2, s.length()/2 + 1);
 	      
-	      //return answer;
+	      return answer;
 	}
 }

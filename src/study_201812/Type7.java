@@ -12,6 +12,9 @@
 입출력 예
 a	b	result
 5	24	TUE
+
+(추가)
+- LocalDate 함수를 통해, 해당 날짜의 요일을 바로 파악할 수 있다.
 */
 
 package study_201812;
