@@ -32,7 +32,7 @@ public class Type2 {
 		System.out.println(solution(626331));
 	}
 
-	public static int solution(int num) {
+	public static int solution(long num) {
 		int answer = 0;
 		while(num != 1){
 			if(num % 2 == 0){
