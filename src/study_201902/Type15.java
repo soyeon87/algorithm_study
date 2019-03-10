@@ -33,30 +33,76 @@ import java.util.Arrays;
 public class Type15 {
 
 	public static void main(String[] args) {
-		System.out.println(solution(new int[]{1,2,3,9,10,12},7));
+		System.out.println(solution(new int[]{1,2},3));
+		//1,2,3,9,10,12
 	}
 	
 	public static int solution(int[] scoville, long K) {
 		int answer = 0;
 
+		int index = 0;
+		
 		while (true) {
-			if (scoville.length == 1) {
-				if (scoville[0] < K) {
+			if (scoville.length -1 == index) {
+				if (scoville[index] < K) {
 					answer = -1;
 				}
 				break;
 			}
 			Arrays.sort(scoville); //heap 정렬
-			if (scoville[0] >= K) {
+			//heapSort(scoville);
+			if (scoville[index] >= K) {
 				break;
 			}
-			scoville[1] = scoville[0] + (scoville[1] * 2);
-			scoville = Arrays.copyOfRange(scoville, 1, scoville.length);
+			scoville[index+1] = scoville[index] + (scoville[index+1] * 2);
+			index++;
 			answer++;
 		}
 
 		return answer;
 	}
+	
+	/*public static void heapify(int array[], int n, int i) {
+	    int p = i;
+	    int l = i * 2 + 1;
+	    int r = i * 2 + 2;
+	 
+	    if (l < n && array[p] < array[l]) {
+	        p = l;
+	    }
+	 
+	    if (r < n && array[p] < array[r]) {
+	        p = r;
+	    }
+	 
+	    if (i != p) {
+	        swap(array, p, i);
+	        heapify(array, n, p);
+	    }
+	}
+	 
+	public static void heapSort(int[] array) {
+	    int n = array.length;
+	 
+	    // init, max heap
+	    for (int i = n / 2 - 1; i >= 0; i--) {
+	        heapify(array, n, i);
+	    }
+	 
+	    // for extract max element from heap
+	    for (int i = n - 1; i > 0; i--) {
+	        swap(array, 0, i);
+	        heapify(array, i, 0);
+	    }
+	}
+	 
+	public static void swap(int[] array, int a, int b) {
+	    int temp = array[a];
+	    array[a] = array[b];
+	    array[b] = temp;
+	}*/
+
+	//출처: https://mygumi.tistory.com/310 [마이구미의 HelloWorld]
 }
 
 //효율성 테스트 남음

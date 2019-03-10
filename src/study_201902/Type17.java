@@ -29,11 +29,11 @@ package study_201902;
 public class Type17 {
 
 	public static void main(String[] args) {
-		System.out.println(solution("ABBB"));
+		System.out.println(solution("AAA"));
 	}
 
 	public static int solution(String name) {
-		int answer = 0;
+		/*int answer = 0;
 		
 		long count = name.chars().filter(a -> a != 'A').count();
 		//System.out.println(count);
@@ -95,7 +95,63 @@ public class Type17 {
 				System.out.println("next : "+index+"/"+answer);	
 			}
 		}
+		
 		return answer;
-	}
+		*/
 
+		int count = (int) name.chars().filter(a -> a != 'A').count();
+		if(count == 0){
+			return 0;
+		}
+		int left_cnt = count, right_cnt = count;
+		int check = 0;
+		int left = 0, right = 0;
+		char[] names = name.toCharArray();
+		
+		for(int i = 0; i < names.length; i++){
+			if(names[i] != 'A'){
+				check = 'Z' - names[i];
+				if(check >=13){
+					right += names[i] - 'A';
+				}else{
+					right += check+1;
+				}
+				//System.out.println("right : "+right );
+				right_cnt--;
+				if(right_cnt <= 0){
+					break;
+				}
+			}
+			right++;
+			//System.out.println("right : " + right);
+		}
+		
+		int index = 0;
+		for(int i = 0; i < names.length; i++){
+			if(i != 0){
+				index = names.length - i; 
+			}
+			if(names[index] != 'A'){
+				check = 'Z' - names[index];
+				if(check >=13){
+					left += names[index] - 'A';
+				}else{
+					left += check+1;
+				}
+				//System.out.println("left : "+left );
+				left_cnt--;
+				if(left_cnt <= 0){
+					break;
+				}
+			}
+			left++;
+			//System.out.println("left : " + left);
+		}
+		
+		if(left > right){
+			return right;
+		}else{
+			return left;
+		}
+	}
 }
