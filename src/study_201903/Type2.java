@@ -36,48 +36,7 @@ public class Type2 {
 			list[i] = String.valueOf(numbers[i]);
 		}
 		
-		/*for(int i = 0; i < list.length; i++){
-			for(int j = 0; j < list.length -i-1; j++){
-				//if(!list[j].equals(list[j+1])){
-					int check = 0;
-					int len_min = Math.min(list[j].length(), list[j+1].length());
-					int len_max = Math.max(list[j].length(), list[j+1].length());
-					for(int k = 0; k < len_min; k++) {
-						if(list[j].charAt(k) < list[j+1].charAt(k)) {
-							String temp=list[j];
-							list[j] = list[j+1];
-							list[j+1] = temp;
-							break;
-						}else if(list[j].charAt(k) == list[j+1].charAt(k)){
-							check++;
-						}
-					}
-					
-					if(check == len_min){
-						String one = list[j]+""+list[j+1];
-						String two = list[j+1]+""+list[j];
-						for(int k = len_min; k < len_min+len_max; k++) {
-							if(one.charAt(k) < two.charAt(k)) {
-								String temp=list[j];
-								list[j] = list[j+1];
-								list[j+1] = temp;
-								break;
-							}else if(one.charAt(k) > two.charAt(k)) {
-								break;
-							}
-						}
-					}
-				//}
-				
-			}
-		}
-		
-		for(int i = 0; i < list.length; i++){
-			answer += list[i];
-		}*/
-		
-		Arrays.sort(list); 
-		
+		Arrays.sort(list);
 		
 		for(int i = list.length-1 ; i >=0; i--) {
 			if(i > 0) {

@@ -65,6 +65,7 @@ public class Type1 {
 
 	static String value = "";
 	
+	//√‚¿˙ - https://onsil-thegreenhouse.github.io/programming/algorithm/2018/04/05/permutation_combination/
 	public static void doPermutation(int[] arr, int startIdx) {
 		int length = arr.length;
 		
@@ -86,6 +87,4 @@ public class Type1 {
 		arr[n1] = arr[n2];
 		arr[n2] = temp;
 	}
-	
-	//https://onsil-thegreenhouse.github.io/programming/algorithm/2018/04/05/permutation_combination/
 }
