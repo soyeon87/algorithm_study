@@ -22,9 +22,9 @@ s	answer
 문제의 예시와 같습니다.
 */
 
-package study_201903;
+package study_201904;
 
-public class Type13 {
+public class Type3 {
 
 	public static void main(String[] args) {
 		System.out.println(solution("(()("));

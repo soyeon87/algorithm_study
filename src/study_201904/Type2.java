@@ -29,11 +29,11 @@ stock	dates	supplies	k	result
 따라서 총 2회의 밀가루를 공급받으면 됩니다.
 */
 
-package study_201903;
+package study_201904;
 
 import java.util.Arrays;
 
-public class Type12 {
+public class Type2 {
 
 	public static void main(String[] args) {
 		System.out.println("결과 : "+solution(4, new int[]{1,2,3,4}, new int[]{10,40,30,20}, 100));

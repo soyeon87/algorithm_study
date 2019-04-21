@@ -16,9 +16,9 @@ brown	red	return
 24	24	[8, 6]
 */
 
-package study_201903;
+package study_201904;
 
-public class Type11 {
+public class Type1 {
 
 	public static void main(String[] args) {
 		int[] result = solution(24, 24);
