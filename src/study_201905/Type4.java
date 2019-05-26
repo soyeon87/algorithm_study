@@ -42,6 +42,7 @@ public class Type4 {
 		if(n == 0 || n == 1){
 			answer = n;
 		}
+		
 		return answer%1234567;
 	}
 	
