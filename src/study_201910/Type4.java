@@ -31,7 +31,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Type4 {
-
 	public static void main(String[] args) {
 		System.out.println(solution(3, new int[][]{{1,1,0},{1,1,0},{0,0,1}}));
 		System.out.println(solution(3, new int[][]{{1,1,0},{1,1,1},{0,0,1}}));
